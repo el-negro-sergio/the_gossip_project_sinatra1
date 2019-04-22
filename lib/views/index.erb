@@ -3,15 +3,17 @@
   <head>
     <meta charset="utf-8">
     <title>The Gossip Project</title>
+    <style type="text/css">body{margin:30px auto;max-width:500px;line-height:1.6;font-size:18px;color:#444;padding:0
+    10px;background-color: springgreen;}h1,h2{line-height:1.4}</style>
   </head>
   <style>A {text-decoration: none;} </style>
   <body>
-    <h1>𝗠𝘆 𝗦𝘂𝗽𝗲𝗿 𝘀𝗶𝘁𝗲 𝗼𝗳 𝗚𝗼𝘀𝘀𝗶𝗽𝘀!</h1>
-    <a href="/gossips/new/"><h2> 𝗖𝗿𝗲𝗮𝘁𝗲 𝗮 𝗻𝗲𝘄 𝗚𝗼𝘀𝘀𝗶𝗽! </h2></a>
-    <h2> 𝗟𝗶𝘀𝘁 𝗼𝗳 𝗮𝗹𝗹 𝗚𝗼𝘀𝘀𝗶𝗽𝘀: </h2>
+    <h1 style = "color: blue">𝗠𝘆 𝗦𝘂𝗽𝗲𝗿 𝘀𝗶𝘁𝗲 𝗼𝗳 𝗚𝗼𝘀𝘀𝗶𝗽𝘀!</h1>
+    <a style="color: inherit;" href="/gossips/new/"><h2 style="color: yellow"> 𝗖𝗿𝗲𝗮𝘁𝗲 𝗮 𝗻𝗲𝘄 <em>𝗚𝗼𝘀𝘀𝗶𝗽</em>! </h2></a>
+    <h2 style="color: red"> 𝗟𝗶𝘀𝘁 𝗼𝗳 𝗮𝗹𝗹 𝗚𝗼𝘀𝘀𝗶𝗽𝘀: </h2>
     <% gossips.each_with_index do |gossip, ix| %>
       <p>
-        <a href="/gossips/<%=ix%>">𝗚𝗼𝘀𝘀𝗶𝗽 <%=ix +1%>: </a><br/>
+        <a style="color: inherit; color: snow" href="/gossips/<%= ix %>">𝗚𝗼𝘀𝘀𝗶𝗽 <%=ix +1%>: </a><br/>
         <%="User : "%><%= gossip.author %><br/>
         <%="Gossip : "%><%= gossip.content %>
       </p> <%= "-"*30 %>

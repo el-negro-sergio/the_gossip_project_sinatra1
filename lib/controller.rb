@@ -15,11 +15,9 @@ require 'gossip'
    redirect '/'
    end
 
-   get "/gossips/:id" do
-   if params [:id].match(/\A\d+\Z/).nil?
-      erb :show, locals: {gossip: nil}
-   else
-      erb :show, locals: {gossip: Gossip.find(params["id"].to_i)}
-   end
-   end 
+   get '/gossips/:id' do
+    erb :show, locals: {
+      id: params["id"],
+      gossip: Gossip.find(params["id"])}
+end
 end

@@ -25,7 +25,7 @@ class Gossip
   return all_gossips
 
   def self.find(id)
-    row = CSV.read(@@file)[id]
+    row = CSV.read(@@file)[id.to_i]
     Gossip.new(row[0], row[1])
     end
 
